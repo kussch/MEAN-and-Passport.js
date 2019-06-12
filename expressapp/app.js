@@ -16,7 +16,7 @@ app.use(cors({
 
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/data');
+mongoose.connect('mongodb://localhost/data', {useNewUrlParser: true});
 
 //passport
 var passport = require('passport');
