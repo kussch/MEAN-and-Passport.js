@@ -28,12 +28,12 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
   secret: 'secret',
-  cookie:{
+  cookie: {
     maxAge: 86400000,
     httpOnly: false,
     secure: false
   },
-  store: new MongoStore({ mongooseConnection: mongoose.connection })
+  store: new MongoStore({mongooseConnection: mongoose.connection})
 }));
 
 require('./passport-config');
