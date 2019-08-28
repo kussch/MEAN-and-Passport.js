@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
     password: new FormControl(null, [Validators.required]),
   })
 
-  constructor(private _router: Router, private _user: UserService) { }
+  constructor(private _router: Router, private _user: UserService) {}
 
   ngOnInit() {
   }
@@ -33,12 +33,12 @@ export class LoginComponent implements OnInit {
       
       this._user.login(JSON.stringify(this.loginForm.value))
       .subscribe(
-        data=> { console.log(data);
+        data=> {console.log(data);
         this._router.navigate(['/user']);
         },
         error=> console.error(error)
       )
-    }
+  }
 }
   
 
